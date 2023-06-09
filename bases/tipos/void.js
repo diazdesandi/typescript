@@ -1,6 +1,5 @@
 "use strict";
 (() => {
-    // void indica que la función no regresa nada
     function callBatman() {
         return;
     }
@@ -10,3 +9,4 @@
     const a = callBatman();
     console.log(a);
 })();
+//# sourceMappingURL=void.js.map

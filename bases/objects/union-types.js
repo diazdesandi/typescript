@@ -8,7 +8,6 @@
         age: 43,
         powers: [""],
     };
-    // Es del tipo objeto, pero sería un objeto personalizado
-    // No existen los tipos en JS.
     console.log(typeof customVariable);
 })();
+//# sourceMappingURL=union-types.js.map

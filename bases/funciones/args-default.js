@@ -1,7 +1,5 @@
 "use strict";
 (() => {
-    // Argumentos opcionales al final
-    // Error: A required parameter cannot follow an optional parameter
     const fullName = (firstName, upper = false, lastName) => {
         const mergedName = `${firstName} ${lastName || "----"}`;
         if (upper)
@@ -12,3 +10,4 @@
     const name = fullName("Tony", true, "Stark");
     console.log({ name });
 })();
+//# sourceMappingURL=args-default.js.map

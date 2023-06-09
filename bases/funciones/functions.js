@@ -10,3 +10,4 @@
     console.log(typeof activateSignal);
     const heroName = returnName();
 })();
+//# sourceMappingURL=functions.js.map
