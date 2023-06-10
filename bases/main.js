@@ -24,7 +24,24 @@ var __rest = (this && this.__rest) || function (s, e) {
     };
     const avengersArr = ["Cap. América", "IronMan", "Hulk"];
     const [, ironman] = avengersArr;
-    console.log({ ironman });
+})();
+(() => {
+    const ironman = {
+        name: "IronMan",
+        weapon: "Armorsuit",
+    };
+    const captAmerica = {
+        name: "Capitan America",
+        weapon: "Shield",
+    };
+    const thor = {
+        name: "Thor",
+        weapon: "Mjolnir",
+    };
+    const avengers = [ironman, thor, captAmerica];
+    for (const avenger of avengers) {
+        console.log(avenger.name, avenger.weapon);
+    }
 })();
 () => {
     const a = "Fernando";
