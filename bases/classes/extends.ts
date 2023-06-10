@@ -19,6 +19,17 @@
       console.log("Constructor Xmen llamado");
     }
 
+    // Getters & Setters
+    // getter no recibe ningún argumento
+    get fullName() {
+      return `${this.name} - ${this.realName}`;
+    }
+
+    // Set tiene que recibir un argumento, no regresa nada.
+    set fullName(name: string) {
+      this.name = name;
+    }
+
     // Accediento al método getFullName de la clase Avenger
     getFullNameXmen() {
       // Al ser privada no se puede acceder a getFullName,
@@ -31,5 +42,12 @@
 
   console.log(wolverine);
 
-  wolverine.getFullNameXmen();
+  //   wolverine.getFullNameXmen();
+
+  // Getters no se ejecutan, solo se mandan llamar
+  //   console.log(wolverine.fullName);
+
+  // Setter
+  wolverine.fullName = "Fernando";
+  console.log(wolverine.fullName);
 })();
