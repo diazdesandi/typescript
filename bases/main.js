@@ -1,95 +1,61 @@
 "use strict";
 (() => {
-    class Mutante {
-        constructor(name, realName) {
-            this.name = name;
-            this.realName = realName;
-        }
-    }
-    class Xmen extends Mutante {
-        salvarMundo() {
-            return "Mundo salvado";
-        }
-    }
-    class Villian extends Mutante {
-        conquistarMundo() {
-            return "Mundo conquistado";
-        }
-    }
-    const wolverine = new Xmen("Wolverine", "logan");
-    const magneto = new Villian("Magneto", "Magnus");
-    const printName = (character) => {
-        console.log(character.realName);
+    let flash = {
+        name: "Barry Allen",
+        age: 24,
+        powers: ["Super velocidad", "Viajar en el tiempo"],
+    };
+    let superman = {
+        name: "Clark Kent",
+        age: 60,
+        powers: ["Super velocidad"],
+        getName() {
+            return this.name;
+        },
     };
 })();
 (() => {
-    class Avenger {
-        static getAvgAge() {
-            return this.name;
+    class Mutant {
+        constructor() {
+            this.name = "";
+            this.realName = "";
+            this.age = 0;
         }
-        constructor(name, team, realName) {
-            this.name = name;
-            this.team = team;
-            this.realName = realName;
-        }
-        bio() {
-            return `${this.name} (${this.team})`;
+        mutantPower(id) {
+            throw new Error("Method not implemented.");
         }
     }
-    Avenger.avgAge = 35;
-    const antman = new Avenger("Antman", "Capitan", "A");
-    console.log(antman);
-    console.log(antman.bio());
-    console.log(Avenger.getAvgAge());
 })();
 (() => {
-    class Avenger {
-        constructor(name, realName) {
-            this.name = name;
-            this.realName = realName;
-            console.log("Constructor Avenger llamado");
-        }
-        getFullName() {
-            return `${this.name} ${this.realName}`;
-        }
-    }
-    class Xmen extends Avenger {
-        constructor(name, realName, isMutant) {
-            super(name, realName);
-            this.isMutant = isMutant;
-            console.log("Constructor Xmen llamado");
-        }
-        get fullName() {
-            return `${this.name} - ${this.realName}`;
-        }
-        set fullName(name) {
-            this.name = name;
-        }
-        getFullNameXmen() {
-            console.log(super.getFullName());
-        }
-    }
-    const wolverine = new Xmen("Wolverine", "Logan", true);
-    console.log(wolverine);
-    wolverine.fullName = "Fernando";
-    console.log(wolverine.fullName);
+    const client = {
+        name: "Fernando",
+        age: 25,
+        address: {
+            id: 125,
+            zip: "KY2",
+            city: "Ottawa",
+        },
+        getFullAddress(id) {
+            return this.address.id;
+        },
+    };
+    const client2 = {
+        name: "Melissa",
+        age: 30,
+        address: {
+            id: 354,
+            zip: "SDF",
+            city: "Toronto",
+        },
+        getFullAddress(id) {
+            return this.address.id;
+        },
+    };
 })();
 (() => {
-    class Apocalipsis {
-        constructor(name) {
-            this.name = name;
-        }
-        static callApocalipsis() {
-            if (!Apocalipsis.instance) {
-                Apocalipsis.instance = new Apocalipsis("Soy apocalipsis");
-            }
-            return Apocalipsis.instance;
-        }
-        changeName(newName) {
-            this.name = newName;
-        }
-    }
-    const apocalipsis = Apocalipsis.callApocalipsis();
-    console.log(apocalipsis);
+    let addNumbersFunction;
+    addNumbersFunction = (a, b) => {
+        return 10;
+    };
 })();
 //# sourceMappingURL=main.js.map
